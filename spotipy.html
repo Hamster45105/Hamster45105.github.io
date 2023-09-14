@@ -48,6 +48,8 @@
             margin-top: 20px;
         }
     </style>
+</head>
+<body>
     <script>
         window.onload = function() {
             // Get the value of the code parameter from the URL
@@ -60,7 +62,7 @@
                 const popup = document.createElement('div');
                 popup.classList.add('popup');
                 const h2 = document.createElement('h2');
-                h2.textContent = 'Paste this URL into the terminal';
+                h2.textContent = 'Paste this URL into the terminal:';
                 popup.appendChild(h2);
                 const input = document.createElement('input');
                 input.type = 'text';
@@ -86,7 +88,7 @@
             } else if (error) {
                 const errorDiv = document.createElement('div');
                 errorDiv.classList.add('error');
-                errorDiv.textContent = 'An unknown error occured: ' + error;
+                errorDiv.textContent = 'An unknown error occurred: ' + error;
                 document.body.appendChild(errorDiv); 
             } else {
                 const error = document.createElement('div');
@@ -96,8 +98,5 @@
             }
         };
     </script>
-</head>
-<body>
-
 </body>
 </html>
